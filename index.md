@@ -1,7 +1,5 @@
-<!DOCTYPE html>
+# markdown folder structure
 
-<h1>show folder structure</h1>
-<a href="https://ongclement.com/blog/github-pages-indexing-directory-copy"></a>
 
 {% assign doclist = site.pages | sort: 'url'  %}
 <ul>
