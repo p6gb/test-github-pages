@@ -1,3 +1,13 @@
 <!DOCTYPE html>
 
-<h1>TEST</h1>
+<h1>show folder structure</h1>
+<a href="https://ongclement.com/blog/github-pages-indexing-directory-copy"></a>
+
+{% assign doclist = site.pages | sort: 'url'  %}
+<ul>
+   {% for doc in doclist %}
+        {% if doc.name contains '.md' or doc.name contains '.html' %}
+            <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
