@@ -5,7 +5,7 @@
 {% assign filelist = site.static_files  %}
 <ul>
     {% for file in filelist %}
-        <li><a href="{{ site.baseurl }}{{ file.url }}">{{ doc.url }}</a></li>
+        <li><a href="{{ site.baseurl }}{{ file.path }}">{{ doc.url }}</a></li>
     {% endfor %}
 
    {% for doc in doclist %}
