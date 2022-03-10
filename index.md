@@ -1,12 +1,16 @@
-# markdown folder structure include jpgs 2
+# markdown folder structure all files
 
 
 {% assign doclist = site.pages | sort: 'url'  %}
+{% assign filelist = site.static_files  %}
 <ul>
-   {% for doc in doclist %}
-               <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url }}</a></li>
+    {% for file in filelist %}
+        <li><a href="{{ site.baseurl }}{{ file.url }}">{{ doc.url }}</a></li>
+    {% endfor %}
 
-        {% if doc.name contains '.md' or doc.name contains '.html' or doc.name contains '.jpg' %}
+   {% for doc in doclist %}
+        {% if doc.name contains '.md' or doc.name contains '.html' %}
+               <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url }}</a></li>
         {% endif %}
     {% endfor %}
 </ul>
